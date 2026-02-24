@@ -1,0 +1,44 @@
+# Добавьте это в ваш APKBUILD
+
+pkgname="linux-firmware-yourdevice"
+pkgver="1.0"
+pkgrel=0
+pkgdesc="Firmware files for your device"
+url=""
+arch="all"
+license="GPL"
+options="!check"
+source="
+    abov/a96t326_gtaxswifi.fw
+    bnx2x/bnx2x-e1-6.2.9.0.fw
+    coreriver/tc305k_j2core_grip.fw
+    coreriver/tc305k_j3y17.fw
+    coreriver/tc305k_j3y17_kor.fw
+    coreriver/tc350k.fw
+    coreriver/tc350k_j3pop.fw
+    cypress/cy8cmbr3145_j3pop.fw
+    cyttsp5_csp.fw
+    exynos7570_acpm_draminit_s.fw
+    exynos7570_acpm_pedo.fw
+    five/ffffffff000000000000000000000072.tlbin
+    melfas_tk/mhs204_on5xlte.fw
+    tsp_melfas/DIABLO_CoreV54_V35_master.fw
+    tsp_melfas/mms438_j4.fw
+    tsp_melfas/mms449_gta7_kids.fw
+    tsp_melfas/mms449_s5neo.fw
+    tsp_synaptics/td4100_j3poplte.fw
+    tsp_synaptics/td4100_on5xlte.fw
+    tsp_synaptics/td4101_j2corelte.fw
+    tsp_synaptics/td4101_j2corelte_recovery.fw
+    tsp_zinitix/bt541c_gpgo.fw
+    tsp_zinitix/zt7538_xcover4.fw
+    tsp_zinitix/zt7548_gtesve.fw
+"
+
+package() {
+    install -Dm644 "\$srcdir"/*.fw "\$pkgdir/lib/firmware/"
+    install -Dm644 "\$srcdir"/*.bin "\$pkgdir/lib/firmware/"
+    install -Dm644 "\$srcdir"/*.dsp "\$pkgdir/lib/firmware/"
+    install -Dm644 "\$srcdir"/*.csp "\$pkgdir/lib/firmware/"
+    install -Dm644 "\$srcdir"/*.cis "\$pkgdir/lib/firmware/"
+}
