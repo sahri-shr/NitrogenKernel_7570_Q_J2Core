@@ -88,7 +88,6 @@ signing_key.priv
 signing_key.x509
 x509.genkey
 *.lds
-*.fw*
 *.bin*
 arch/arm64/kernel/vdso/vdso-offsets.h
 net/wireguard/
@@ -96,8 +95,6 @@ crypto/asymmetric_keys/x509-asn1.c
 crypto/asymmetric_keys/x509-asn1.h
 crypto/asymmetric_keys/x509_rsakey-asn1.c
 crypto/asymmetric_keys/x509_rsakey-asn1.h
-firmware/five/ffffffff000000000000000000000072.tlbin
-firmware/five/ffffffff000000000000000000000072.tlbin.gen.S
 kernel/config_data.h
 kernel/time/hz.bc
 kernel/time/timeconst.h
